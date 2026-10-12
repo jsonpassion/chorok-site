@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보 처리방침 | 초록</title>
+<link rel="icon" type="image/png" href="../icon.png">
+<style>
+  :root { --accent:#1F7A4D; --ink:#1B2420; --sub:#5A6B61; --bg:#F7F9F6; --line:#E3E8E4; --box:#EBF3EF; }
+  @media (prefers-color-scheme: dark) { :root { --accent:#7BD3A0; --ink:#D3DBD6; --sub:#94A39A; --bg:#121614; --line:#2A322E; --box:#1C2A22; } }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif; background:var(--bg); color:var(--ink);
+         line-height:1.75; -webkit-font-smoothing:antialiased; word-break:keep-all; }
+  .wrap { max-width:680px; margin:0 auto; padding:56px 20px 80px; }
+  a { color:var(--accent); }
+  a.back { text-decoration:none; font-weight:700; font-size:14px; }
+  h1 { font-size:28px; font-weight:800; margin-top:18px; }
+  p.date { color:var(--sub); font-size:13px; margin-top:6px; }
+  h2 { font-size:18px; font-weight:800; margin-top:36px; }
+  p, li { font-size:15px; margin-top:10px; }
+  ul { padding-left:22px; margin-top:8px; }
+  .box { background:var(--box); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin-top:22px; font-weight:600; }
+  footer { margin-top:56px; font-size:13px; color:var(--sub); }
+  .row { display:flex; justify-content:space-between; align-items:center; }
+  .lang { height:32px; padding:0 12px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--ink); font:inherit; font-size:13px; font-weight:700; cursor:pointer; }
+  [data-lang][hidden] { display:none; }
+</style>
+</head>
+<body data-title-ko="개인정보 처리방침 | 초록" data-title-en="Privacy Policy | Chorok">
+<div class="wrap">
+  <div class="row">
+    <a class="back" href="../" data-back>← 초록</a>
+    <button class="lang" id="langBtn" type="button" aria-label="Language / 언어"><span id="langLabel">EN</span></button>
+  </div>
+
+<div data-lang="ko">
+  <h1>개인정보 처리방침</h1>
+  <p class="date">시행일 2026년 10월 12일</p>
+
+  <div class="box">
+    초록은 회원 가입이 없고, 광고와 외부 분석 도구를 쓰지 않습니다.<br>
+    하이라이트, 메모, 질문은 개발자가 볼 수 없습니다.
+  </div>
+
+  <h2>1. 논문 파일</h2>
+  <p>초록은 사용자가 연 논문을 각 기기가 arXiv(arxiv.org, ar5iv.labs.arxiv.org)에서 직접 받아 기기 안에 저장합니다. 개발자의 서버는 논문 파일을 받거나 보관하지 않습니다.</p>
+
+  <h2>2. 내 기록과 iCloud</h2>
+  <p>라이브러리, 읽던 위치, 하이라이트, 메모, AI 결과는 기기 안에 저장됩니다. Pro에서 iCloud 동기화를 쓰면 사용자 본인의 iCloud 비공개 데이터베이스에 저장되며, 개발자는 이 내용에 접근할 수 없습니다. 읽기 설정은 iCloud 키값 저장소로 기기 사이에 맞춥니다.</p>
+
+  <h2>3. AI 처리</h2>
+  <ul>
+    <li>세 줄 요약, 쉬운 설명 같은 작업은 Apple의 기기 안 모델로 처리합니다.</li>
+    <li>핵심 정리, 묻기 같은 긴 작업은 설정에 따라 Apple Private Cloud Compute로 본문과 질문을 보내 처리합니다. Apple은 이 요청을 저장하지 않는다고 밝히고 있습니다. 하이라이트와 메모는 보내지 않습니다.</li>
+    <li>Apple 외의 어떤 AI 서비스에도 논문 본문, 질문, 하이라이트, 메모를 보내지 않습니다.</li>
+    <li>설정의 '긴 작업에 Apple 서버 쓰기'를 끄면 모든 AI 작업을 기기 안에서만 처리합니다.</li>
+  </ul>
+
+  <h2>4. 공유 요약 캐시</h2>
+  <p>같은 논문을 여는 사람이 AI 결과를 바로 볼 수 있도록, 초록은 개발자가 운영하는 요약 캐시 서버를 씁니다.</p>
+  <ul>
+    <li>나눈 요약 받기(기본 켬): 논문을 열 때 arXiv 번호, 버전, 결과 종류, 언어로 서버에 저장된 요약이 있는지 묻습니다. 서버는 어떤 논문의 요약이 조회됐는지는 알 수 있지만, 누가 조회했는지는 알 수 없습니다.</li>
+    <li>요약 나누기(처음 AI를 쓸 때 고름): 기기에서 만든 일반 요약을 arXiv 번호와 함께 서버로 보냅니다. 세 줄 요약은 초록(메타데이터)으로만 만든 것이고, 본문을 바탕으로 한 정리는 CC BY, CC BY-SA, CC0 라이선스 논문만 보냅니다. 나눈 요약은 다른 사용자에게 보입니다.</li>
+    <li>보내지 않는 것: 사용자 식별자, 기기 식별자, 질문, 하이라이트, 메모, 쿠키.</li>
+    <li>남용을 막기 위해 Apple App Attest로 앱이 진짜인지 확인합니다. 이 확인에는 사용자를 식별하는 정보가 들어 있지 않습니다.</li>
+    <li>서버는 IP 주소와 요청 기록을 저장하지 않습니다.</li>
+    <li>두 기능은 설정 › AI와 번역에서 각각 끌 수 있습니다.</li>
+  </ul>
+
+  <h2>5. 번역</h2>
+  <p>문단 번역은 Apple의 기기 안 번역으로 처리하며, 번역 결과는 기기에만 저장되고 동기화되지 않습니다.</p>
+
+  <h2>6. 결제</h2>
+  <p>Pro 결제는 Apple App Store가 처리합니다. 개발자는 결제 수단 정보에 접근할 수 없고, 앱은 이용권의 종류와 상태만 기기에 저장합니다.</p>
+
+  <h2>7. 보관과 삭제</h2>
+  <p>설정 › 데이터 › '모든 기록 지우기'로 기기와 iCloud의 기록을 지울 수 있습니다. 공유 캐시에 나눈 요약은 특정 사용자와 연결되지 않아 개별로 찾아 지울 수 없으며, 논문 권리자의 요청이 있으면 해당 논문의 요약을 숨깁니다.</p>
+
+  <h2>8. 아동</h2>
+  <p>초록은 아동을 포함한 누구의 개인정보도 수집하지 않습니다.</p>
+
+  <h2>9. 변경과 문의</h2>
+  <p>이 방침이 바뀌면 이 페이지에 알립니다. 문의는 <a href="mailto:forgelab.aitech@gmail.com?subject=%5B%EC%B4%88%EB%A1%9D%5D%20%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%AC%B8%EC%9D%98">forgelab.aitech@gmail.com</a>으로 보내 주세요.</p>
+  <p>Thank you to arXiv for use of its open access interoperability. 초록은 arXiv가 만들거나 검토, 승인한 앱이 아닙니다.</p>
+
+  <footer>
+    <a href="../privacy/">개인정보 처리방침</a> &nbsp; <a href="../terms/">이용약관</a>
+    <p style="margin-top:10px">© 2026 ForgeLab, 대표 Jason Lee</p>
+  </footer>
+</div>
+
+<div data-lang="en" hidden>
+  <h1>Privacy Policy</h1>
+  <p class="date">Effective October 12, 2026</p>
+
+  <div class="box">
+    Chorok has no sign-up, no ads and no third-party analytics.<br>
+    The developer can't see your highlights, notes or questions.
+  </div>
+
+  <h2>1. Paper files</h2>
+  <p>Each device downloads the papers you open directly from arXiv (arxiv.org, ar5iv.labs.arxiv.org) and keeps them on the device. The developer's server never receives or stores paper files.</p>
+
+  <h2>2. Your records and iCloud</h2>
+  <p>Your library, reading positions, highlights, notes and AI results are stored on the device. With iCloud sync (Pro) they are stored in your own private iCloud database, which the developer can't access. Reading settings are kept in step across devices through iCloud key-value storage.</p>
+
+  <h2>3. AI processing</h2>
+  <ul>
+    <li>Tasks such as the three-line summary and plain explanations run on Apple's on-device model.</li>
+    <li>Longer tasks such as key points and Ask may send the paper text and your question to Apple Private Cloud Compute, depending on your settings. Apple states that it does not store these requests. Highlights and notes are never sent.</li>
+    <li>Nothing is sent to any AI service other than Apple's.</li>
+    <li>Turn off "Use Apple servers for long tasks" in Settings to keep all AI work on the device.</li>
+  </ul>
+
+  <h2>4. Shared summary cache</h2>
+  <p>So that people who open the same paper can see AI results right away, Chorok uses a summary cache run by the developer.</p>
+  <ul>
+    <li>Receive shared summaries (on by default): when you open a paper, the app asks the cache for a summary by arXiv number, version, kind and language. The server can tell which paper's summary was requested, not who requested it.</li>
+    <li>Share summaries (chosen the first time you use AI): general summaries made on your device are sent with the arXiv number. The three-line summary is made from the abstract (metadata) only; summaries of the full text are sent only for papers under CC BY, CC BY-SA or CC0. Shared summaries are visible to other users.</li>
+    <li>Never sent: user or device identifiers, questions, highlights, notes, cookies.</li>
+    <li>To prevent abuse, Apple App Attest confirms the requests come from the genuine app. It carries nothing that identifies you.</li>
+    <li>The server does not store IP addresses or request logs.</li>
+    <li>Each feature can be turned off in Settings › AI and Translation.</li>
+  </ul>
+
+  <h2>5. Translation</h2>
+  <p>Paragraph translation uses Apple's on-device translation. Translations stay on the device and are not synced.</p>
+
+  <h2>6. Payments</h2>
+  <p>Pro purchases are processed by the Apple App Store. The developer has no access to payment details; the app stores only the type and state of your pass on the device.</p>
+
+  <h2>7. Retention and deletion</h2>
+  <p>Settings › Data › "Erase All Records" deletes your records on the device and in iCloud. Shared summaries are not linked to any user, so they can't be looked up per person; summaries of a paper are hidden at the rights holder's request.</p>
+
+  <h2>8. Children</h2>
+  <p>Chorok collects no personal data from anyone, including children.</p>
+
+  <h2>9. Changes and contact</h2>
+  <p>Changes are announced on this page. Contact <a href="mailto:forgelab.aitech@gmail.com?subject=%5BChorok%5D%20Privacy">forgelab.aitech@gmail.com</a>.</p>
+  <p>Thank you to arXiv for use of its open access interoperability. Chorok was not made, reviewed or approved by arXiv.</p>
+
+  <footer>
+    <a href="../privacy/">Privacy Policy</a> &nbsp; <a href="../terms/">Terms of Use</a>
+    <p style="margin-top:10px">© 2026 ForgeLab, Jason Lee</p>
+  </footer>
+</div>
+</div>
+<script>
+  (function () {
+    var key = 'chorok.lang';
+    function initial() {
+      try { var s = localStorage.getItem(key); if (s) return s; } catch (e) {}
+      return (navigator.language || 'ko').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en';
+    }
+    function apply(l) {
+      document.querySelectorAll('[data-lang]').forEach(function (b) { b.hidden = b.getAttribute('data-lang') !== l; });
+      document.documentElement.lang = l;
+      document.getElementById('langLabel').textContent = l === 'en' ? '한국어' : 'EN';
+      document.querySelector('[data-back]').textContent = l === 'en' ? '← Chorok' : '← 초록';
+      document.title = document.body.getAttribute(l === 'en' ? 'data-title-en' : 'data-title-ko');
+      try { localStorage.setItem(key, l); } catch (e) {}
+    }
+    var current = initial();
+    document.getElementById('langBtn').addEventListener('click', function () { current = current === 'en' ? 'ko' : 'en'; apply(current); });
+    apply(current);
+  })();
+</script>
+</body>
+</html>
